@@ -2,27 +2,20 @@
 
 <h1>Listing Trip Plans</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @trip_plans.each do |trip_plan| %>
-      <tr>
-        <td><%= trip_plan.name %></td>
-        <td><%= image_tag(trip_plan.image_url, width: 60) if trip_plan.image.present? %></td>
-        <td><%= link_to 'Show', trip_plan %></td>
-        <td><%= link_to 'Edit', edit_trip_plan_path(trip_plan) %></td>
-        <td><%= link_to 'Destroy', trip_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ol class="tripPlans">
+  <% @trip_plans.each do |trip_plan| %>
+    <li class="tripPlan">
+      <%= link_to trip_plan do %>
+        <p class="tripPlan-image">
+          <%= image_tag(trip_plan.image_url, width: 360) if trip_plan.image.present? %>
+        </p>
+        <p class="tripPlan-name">
+          <%= trip_plan.name %>
+        </p>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
 
 <br>
 

@@ -1,3 +1,37 @@
 // Place all the styles related to the trip_plans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tripPlans {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.tripPlan {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  width: 360;
+  height: 360;
+  position: relative;
+}
+
+.tripPlan-name {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.tripPlan-image {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
