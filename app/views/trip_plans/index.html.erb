@@ -17,7 +17,7 @@
       <tr>
         <td><%= trip_plan.user %></td>
         <td><%= trip_plan.name %></td>
-        <td><%= trip_plan.image %></td>
+        <td><%= image_tag(trip_plan.image_url, width: 60) if trip_plan.image.present? %></td>
         <td><%= link_to 'Show', trip_plan %></td>
         <td><%= link_to 'Edit', edit_trip_plan_path(trip_plan) %></td>
         <td><%= link_to 'Destroy', trip_plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
