@@ -37,3 +37,8 @@ header {
 main {
   margin-top: 60px;
 }
+
+.page {
+  width: 800px;
+  margin: 0 auto auto;
+}
