@@ -4,7 +4,7 @@ class TripPlansController < ApplicationController
   # GET /trip_plans
   # GET /trip_plans.json
   def index
-    @trip_plans = TripPlan.where(user_id: current_user.try(:id))
+    @trip_plans = TripPlan.where(user_id: current_user.try(:id)).order('created_at DESC')
   end
 
   # GET /trip_plans/1
