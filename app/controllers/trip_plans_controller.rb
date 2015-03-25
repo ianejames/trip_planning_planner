@@ -4,7 +4,7 @@ class TripPlansController < ApplicationController
   # GET /trip_plans
   # GET /trip_plans.json
   def index
-    @trip_plans = TripPlan.all
+    @trip_plans = TripPlan.where(user_id: current_user.try(:id))
   end
 
   # GET /trip_plans/1
@@ -14,7 +14,7 @@ class TripPlansController < ApplicationController
 
   # GET /trip_plans/new
   def new
-    @trip_plan = TripPlan.new
+    @trip_plan = TripPlan.new(user_id: current_user.try(:id))
   end
 
   # GET /trip_plans/1/edit
@@ -24,7 +24,7 @@ class TripPlansController < ApplicationController
   # POST /trip_plans
   # POST /trip_plans.json
   def create
-    @trip_plan = TripPlan.new(trip_plan_params)
+    @trip_plan = TripPlan.new(trip_plan_params.merge(user_id: current_user.try(:id)))
 
     respond_to do |format|
       if @trip_plan.save
@@ -64,11 +64,11 @@ class TripPlansController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip_plan
-      @trip_plan = TripPlan.find(params[:id])
+      @trip_plan = TripPlan.where(user_id: current_user.try(:id)).find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_plan_params
-      params.require(:trip_plan).permit(:user_id, :name, :image)
+      params.require(:trip_plan).permit(:name, :image)
     end
 end
