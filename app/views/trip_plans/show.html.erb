@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @trip_plan.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trip_plan.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @trip_plan.image %>
+</p>
+
+<%= link_to 'Edit', edit_trip_plan_path(@trip_plan) %> |
+<%= link_to 'Back', trip_plans_path %>
