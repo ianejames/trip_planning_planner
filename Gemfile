@@ -48,3 +48,6 @@ gem 'devise', '~> 3.4'
 
 # Use CarrierWave for image uploads
 gem 'carrierwave'
+
+# Use RMagick to edit image uploads
+gem 'rmagick'
