@@ -1,4 +1,6 @@
 class TripPlansController < ApplicationController
+  before_action :authenticate_user!
+
   before_action :set_trip_plan, only: [:show, :edit, :update, :destroy]
 
   # GET /trip_plans
