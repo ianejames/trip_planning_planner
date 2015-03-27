@@ -51,3 +51,6 @@ gem 'carrierwave'
 
 # Use RMagick to edit image uploads
 gem 'rmagick'
+
+# Use jQuery UI for dialogs
+gem 'jquery-ui-rails'
