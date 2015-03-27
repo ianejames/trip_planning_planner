@@ -32,9 +32,11 @@ class TripPlansController < ApplicationController
       if @trip_plan.save
         format.html { redirect_to @trip_plan, notice: 'Trip plan was successfully created.' }
         format.json { render :show, status: :created, location: @trip_plan }
+        format.js {}
       else
         format.html { render :new }
         format.json { render json: @trip_plan.errors, status: :unprocessable_entity }
+        format.js {}
       end
     end
   end

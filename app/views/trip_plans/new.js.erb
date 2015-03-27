@@ -1,10 +1,10 @@
-$("<%=j render('form') %>").dialog({
+$("<div class=\"new_trip_plan_container\"><%=j render('form') %></div>").dialog({
   title: "New Trip Plan",
   buttons: [
     {
       text: "Create",
       click: function() {
-        $(this).submit();
+        $(this).find("form.new_trip_plan").submit();
       }
     }
   ]

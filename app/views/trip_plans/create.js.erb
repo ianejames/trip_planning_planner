@@ -1,0 +1,6 @@
+<% if @trip_plan.errors.any? %>
+  $("form.new_trip_plan").replaceWith($("<%=j render('form') %>"));
+<% else %>
+  $(".tripPlans").prepend($("<%=j render @trip_plan %>"));
+  $("form.new_trip_plan").parent().dialog('close');
+<% end %>
