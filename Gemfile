@@ -54,3 +54,6 @@ gem 'rmagick'
 
 # Use jQuery UI for dialogs
 gem 'jquery-ui-rails'
+
+# Have to use the remotipart gem for ajax file uploads
+gem 'remotipart', '~> 1.2'
