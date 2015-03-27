@@ -34,11 +34,18 @@ header {
   font-size: 30px;
 }
 
+.header-accessory {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 main {
   margin-top: 60px;
 }
 
 .page {
+  position: relative;
   width: 800px;
   margin: 0 auto auto;
 }
