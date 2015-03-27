@@ -50,3 +50,7 @@ main {
   width: 800px;
   margin: 0 auto auto;
 }
+
+.ui-dialog-content .actions {
+  display: none;
+}
