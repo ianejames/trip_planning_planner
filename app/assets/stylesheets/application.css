@@ -58,3 +58,7 @@ main {
 .ui-dialog-content .actions {
   display: none;
 }
+
+.ui-dialog-content .field input {
+  width: 100%;
+}
