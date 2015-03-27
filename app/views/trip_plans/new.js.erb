@@ -1,0 +1,11 @@
+$("<%=j render('form') %>").dialog({
+  title: "New Trip Plan",
+  buttons: [
+    {
+      text: "Create",
+      click: function() {
+        $(this).submit();
+      }
+    }
+  ]
+});
