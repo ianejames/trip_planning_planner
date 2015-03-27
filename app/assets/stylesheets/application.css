@@ -51,6 +51,10 @@ main {
   margin: 0 auto auto;
 }
 
+.field label {
+  font-weight: bold;
+}
+
 .ui-dialog-content .actions {
   display: none;
 }
