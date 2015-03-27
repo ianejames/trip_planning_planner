@@ -1,0 +1,10 @@
+<li class="tripPlan">
+  <%= link_to trip_plan do %>
+    <p class="tripPlan-image">
+      <%= image_tag(trip_plan.image_url, width: 360) if trip_plan.image.present? %>
+    </p>
+    <p class="tripPlan-name">
+      <%= trip_plan.name %>
+    </p>
+  <% end %>
+</li>
